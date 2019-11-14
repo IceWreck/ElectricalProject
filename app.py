@@ -18,11 +18,11 @@ class History(db.Model):
 @app.route('/', methods=["GET"])
 def index():
     breach_history = History.query.all()
-    return render_template('index.html', breach_history=breach_history)
+    return render_template('template.html', breach_history=breach_history)
 
 @app.route('/fuckyou', methods=["GET"])
 def nodemcu_endpoint():
-    breach_time = datetime.now().strftime('%H:%M on %d-%m-%Y')
+    breach_time = datetime.now().strftime('%I:%M %p on %d-%B-%Y')
     breach = History(breach_time = breach_time)
     db.session.add(breach)
     db.session.commit()

@@ -44,7 +44,7 @@
     <div>
         <h1>Fuck Arduino</h1>
         <p>Hail NodeMCU</p>
-        <p>{% for test in breach_history %}
+        <p>{% for test in breach_history | reverse %}
             <li>{{ test.breach_time }}</li>
             {% endfor %}</p>
     </div>

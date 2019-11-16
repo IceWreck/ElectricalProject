@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+import os
+
 
 app = Flask(__name__)
 
-
-
-app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///test.db'
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
@@ -20,16 +20,11 @@ def index():
     breach_history = History.query.all()
     return render_template('template.html', breach_history=breach_history)
 
-@app.route('/fuckyou', methods=["GET"])
+@app.route('/hailhydra', methods=["GET"])
 def nodemcu_endpoint():
     breach_time = datetime.now().strftime('%I:%M %p on %d-%B-%Y')
     breach = History(breach_time = breach_time)
     db.session.add(breach)
     db.session.commit()
-    return "FuckYou"
-
-
-# Coment out this later
-if __name__ == '__main__':
-    app.debug = True
-    app.run(host = '0.0.0.0',port=5005)
+    return "Hydra"
+    

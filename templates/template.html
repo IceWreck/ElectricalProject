@@ -1,110 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <title>Electrical Project</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css"
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <!-- Material Kit CSS -->
-  <link href="../static/css/material-kit.min.css" rel="stylesheet" />
-</head>
+  <head>
+    <title>Electrical Project</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <!-- Material Kit CSS -->
+    <link href="../static/css/material-kit.min.css" rel="stylesheet" />
+  </head>
 
-<body>
-  <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100">
-    <div class="container">
-      <div class="navbar-translate">
-        <a class="navbar-brand" href="#">
-          LaserSecSystem </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <body>
+    <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100">
+      <div class="container">
+        <div class="navbar-translate">
+          <a class="navbar-brand" href="#">
+            LaserSecSystem </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="material-icons">cloud_download</i> #
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('../static/img/bg5.jpg')">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 ml-auto mr-auto">
-          <div class="brand text-center">
-            <h1>Electrical Project</h1>
-            <h3 class="title text-center">Breach History</h3>
+    </nav>
+    <div class="page-header header-filter" data-parallax="true" style="background-image: url('../static/img/bg5.jpg')">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto">
+            <div class="brand text-center">
+              <h1>Electrical Project</h1>
+              <h3 class="title text-center">J3 TIET</h3>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="main main-raised">
-    <div class="container">
-      <div class="section text-center">
-        <h2 class="title">Breach History</h2>
-        <table class="table">
-
-          <thead>
-            <tr>
-              <th class="text-left">#
-              </th>
-              <th class="text-left">Time
-              </th>
-            </tr>
-          </thead>
-          <tbody>
+    <div class="main main-raised">
+      <div class="container">
 
 
+        <div class="section text-center">
+              <h1>Laser Security System</h1>
 
-            {% for test in breach_history | reverse %}
-            <tr>
-              <td class="text-left">  {{ loop.index }} </td>
-              <td class="text-left">{{ test.breach_time }}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
+          <h2 class="title">Breach History</h2>
+          <table class="table">
 
-        </table>
+            <thead>
+              <tr>
+                <th class="text-left">#
+                </th>
+                <th class="text-left">Time
+                </th>
+              </tr>
+            </thead>
+            <tbody>
 
 
+
+              {% for test in breach_history | reverse %}
+              <tr>
+                <td class="text-left"> {{ loop.index }} </td>
+                <td class="text-left">{{ test.breach_time }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+
+          </table>
+
+
+
+        </div>
+        <hr />
+
+        <div class="section text-center">
+          <h2 class="title">Project Report</h2>
+
+          <a href="../static/report.pdf">
+            <button class="btn btn-primary btn-lg">Download Project Report<div class="ripple-container"></div></button>
+
+          </a>
+        </div>
+        <hr />
+        <div class="section">
+          <center>
+            <h2 class="title">Project Built By</h2>
+          </center>
+          <ul>
+            <li>
+              <h4>Anchit Bajaj </h4>
+            </li>
+            <li>
+              <h4>Rahul Kapoor </h4>
+            </li>
+            <li>
+              <h4>Kartik Mann </h4>
+            </li>
+            <li>
+              <h4>Divyam </h4>
+            </li>
+            <li>
+              <h4>Arsh Pizzaguy</h4>
+            </li>
+          </ul>
+        </div>
+
+
+        <br>
+        <hr />
+        <br>
+        <br>
 
       </div>
     </div>
-  </div>
 
 
-  <footer class="footer footer-default">
-    <div class="container">
-      <nav class="float-left">
-        <ul>
-          <li>
-            <a href="#">
-              Electrical Project
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="copyright float-right">
-        &copy;
-        <script>
-          document.write(new Date().getFullYear())
-        </script>
+    <footer class="footer footer-default">
+      <div class="container">
+        <nav class="float-left">
+          <ul>
+            <li>
+              <a href="#">
+                Electrical Project
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="copyright float-right">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear())
+
+          </script>
+        </div>
       </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+
+  </body>
 
 </html>

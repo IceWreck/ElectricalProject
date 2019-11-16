@@ -5,8 +5,8 @@
 
 
 /* Set these to your desired credentials. */
-const char *ssid = "Yourmom";  //ENTER YOUR WIFI SETTINGS
-const char *password = "123456789";
+const char *ssid = "Solgaleo";  //ENTER YOUR WIFI SETTINGS
+const char *password = "hoenn>alola";
 
 const int buzzer_pin = 5;
 unsigned long previousMillis = 0;
@@ -76,7 +76,7 @@ void loop() {
     String Link;
     //GET Data
 
-    Link = "http://other.abifog.com/POSTtest/?Yourmomsfat=True" + String(random(500));
+    Link = "http://eeproject.abifog.com/test";
 
     http.begin(Link);     //Specify request destination
 
